@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="antarctic_deep">#3A3C42</color>
+    <color name="woodland">#9CCD62</color>
+    <color name="apple_white">#F7F8E2</color>
+    <color name="moorland_mist">#DFDECA</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
