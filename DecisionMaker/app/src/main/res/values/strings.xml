@@ -1,7 +1,15 @@
 <resources>
+
     <string name="app_name">Decision Maker</string>
     <!--ca-app-pub-3036948542324685/5643130808-->
     <!--ca-app-pub-3036948542324685/4330049131-->
     <string name="main_banner" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
     <string name="main_interstitial" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+
+
+    <string name="ask_me_your_question_here">Ask me your question here</string>
+    <string name="options">Options</string>
+    <string name="option">Option</string>
+    <string name="decide">Decide</string>
+
 </resources>

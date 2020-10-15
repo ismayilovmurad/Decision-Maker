@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mainViewModel"
+            type="com.martiandeveloper.decisionmaker.viewmodel.MainViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".view.MainFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fragment_main_mainTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textColorHint="@color/woodland"
+            app:hintAnimationEnabled="false"
+            app:hintTextColor="@color/woodland"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background"
+                android:fontFamily="@font/actor"
+                android:hint="@string/ask_me_your_question_here"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:textColor="@color/apple_white"
+                android:textColorHint="@color/woodland" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fragment_main_optionsMTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/actor"
+            android:text="@string/options"
+            android:textColor="@color/woodland"
+            app:layout_constraintEnd_toEndOf="@id/fragment_main_mainTIL"
+            app:layout_constraintStart_toStartOf="@id/fragment_main_mainTIL"
+            app:layout_constraintTop_toBottomOf="@id/fragment_main_mainTIL" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@id/fragment_main_buttonsLL"
+            app:layout_constraintTop_toBottomOf="@id/fragment_main_optionsMTV">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/actor"
+                android:textColor="@color/apple_white"
+                android:textSize="18sp" />
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/fragment_main_buttonsLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/antarctic_deep"
+                android:fontFamily="@font/actor"
+                android:text="@string/option"
+                android:textAllCaps="false"
+                android:textColor="@color/apple_white"
+                app:cornerRadius="0dp"
+                app:icon="@drawable/ic_option"
+                app:iconTint="@color/moorland_mist"
+                app:strokeColor="@color/woodland"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/antarctic_deep"
+                android:fontFamily="@font/actor"
+                android:text="@string/decide"
+                android:textAllCaps="false"
+                android:textColor="@color/apple_white"
+                app:cornerRadius="0dp"
+                app:icon="@drawable/ic_decide"
+                app:iconTint="@color/moorland_mist"
+                app:strokeColor="@color/woodland"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
