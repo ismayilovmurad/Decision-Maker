@@ -11,5 +11,8 @@
     <string name="options">Options</string>
     <string name="option">Option</string>
     <string name="decide">Decide</string>
+    <string name="enter_your_option_here">Enter your option here</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
 
 </resources>
