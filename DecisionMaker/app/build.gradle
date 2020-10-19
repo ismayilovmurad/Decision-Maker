@@ -89,4 +89,7 @@ dependencies {
     implementation "com.google.android.play:core-ktx:$playcore_ktx_version"
     // Timber
     implementation "com.jakewharton.timber:timber:$timber_version"
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -10,11 +11,47 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:gravity="center"
+        android:orientation="vertical"
         tools:context=".view.ResultFragment">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/actor"
+            android:text="@string/i_think_you_should_go_with"
+            android:textColor="@color/apple_white"
+            android:textSize="24sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/actor"
+            android:text="@{resultViewModel.decide}"
+            android:textColor="@color/woodland"
+            android:textSize="32sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/antarctic_deep"
+            android:fontFamily="@font/actor"
+            android:onClick="@{() -> resultViewModel.onTryAgainMBTNClick()}"
+            android:text="@string/try_again"
+            android:textAllCaps="false"
+            android:textColor="@color/apple_white"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_try_again"
+            app:iconTint="@color/moorland_mist"
+            app:strokeColor="@color/woodland"
+            app:strokeWidth="1dp" />
+
+    </LinearLayout>
 
 </layout>

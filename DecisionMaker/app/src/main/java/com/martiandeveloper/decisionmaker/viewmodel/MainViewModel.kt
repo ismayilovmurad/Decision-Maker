@@ -1,5 +1,6 @@
 package com.martiandeveloper.decisionmaker.viewmodel
 
+import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -34,9 +35,23 @@ class MainViewModel : ViewModel() {
     val optionsMTV: LiveData<String>
         get() = _optionsMTV
 
+    private var _options = MutableLiveData<ArrayList<String>>()
+    val options: LiveData<ArrayList<String>>
+        get() = _options
+
+    private var _isLoadingDialogShowing = MutableLiveData<Boolean>()
+    val isLoadingDialogShowing: LiveData<Boolean>
+        get() = _isLoadingDialogShowing
+
+    private var _view = MutableLiveData<View>()
+    val view: LiveData<View>
+        get() = _view
+
 
     init {
         _isOptionDialogShowing.value = false
+
+        _options.value = ArrayList()
     }
 
 
@@ -78,6 +93,22 @@ class MainViewModel : ViewModel() {
 
     fun setOptionsMTVText(text: String) {
         _optionsMTV.value = text
+    }
+
+    fun addOption(text: String) {
+        _options.value?.add(text)
+    }
+
+    fun resetOptionET() {
+        optionET.value = ""
+    }
+
+    fun setIsLoadingDialogShowing(show: Boolean) {
+        _isLoadingDialogShowing.value = show
+    }
+
+    fun setView(view: View) {
+        _view.value = view
     }
 
 }
